@@ -14,14 +14,17 @@ function Navbar() {
   return (
     <nav style={styles.navbar}>
       {/* Brand / Logo */}
-      <Link to={token ? "/dashboard" : "/login"} style={styles.brand}>
-        🐾 PetCare
+      <Link to="/" style={styles.brand}>
+        PetCare
       </Link>
 
       {/* Navigation links */}
       <div style={styles.links}>
         {token ? (
           <>
+            <Link to="/" style={styles.link}>
+              Home
+            </Link>
             <Link to="/dashboard" style={styles.link}>
               Dashboard
             </Link>
@@ -43,6 +46,9 @@ function Navbar() {
           </>
         ) : (
           <>
+            <Link to="/" style={styles.link}>
+              Home
+            </Link>
             <Link to="/login" style={styles.link}>
               Login
             </Link>
